@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4C2AD3C2-B06E-4B51-A090-86A9F8D71EC6}|PROG71990_Group4\\PROG71990_Group4.vcxproj|C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4C2AD3C2-B06E-4B51-A090-86A9F8D71EC6}|PROG71990_Group4\\PROG71990_Group4.vcxproj|solutionrelative:PROG71990_Group4\\event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2AD3C2-B06E-4B51-A090-86A9F8D71EC6}|PROG71990_Group4\\PROG71990_Group4.vcxproj|C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\event.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4C2AD3C2-B06E-4B51-A090-86A9F8D71EC6}|PROG71990_Group4\\PROG71990_Group4.vcxproj|solutionrelative:PROG71990_Group4\\event.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4C2AD3C2-B06E-4B51-A090-86A9F8D71EC6}|PROG71990_Group4\\PROG71990_Group4.vcxproj|C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4C2AD3C2-B06E-4B51-A090-86A9F8D71EC6}|PROG71990_Group4\\PROG71990_Group4.vcxproj|solutionrelative:PROG71990_Group4\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -67,6 +75,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "event.h",
+              "DocumentMoniker": "C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\event.h",
+              "RelativeDocumentMoniker": "PROG71990_Group4\\event.h",
+              "ToolTip": "C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\event.h",
+              "RelativeToolTip": "PROG71990_Group4\\event.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-30T22:25:04.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "event.c",
+              "DocumentMoniker": "C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\event.c",
+              "RelativeDocumentMoniker": "PROG71990_Group4\\event.c",
+              "ToolTip": "C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\event.c",
+              "RelativeToolTip": "PROG71990_Group4\\event.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-30T22:24:58.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "main.c",
               "DocumentMoniker": "C:\\Users\\kianc\\source\\repos\\PROG71990_Group4\\PROG71990_Group4\\PROG71990_Group4\\main.c",
               "RelativeDocumentMoniker": "PROG71990_Group4\\main.c",
