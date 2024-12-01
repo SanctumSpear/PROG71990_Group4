@@ -10,4 +10,5 @@ void CreateEvent() {
 	fgets(newEvent.title, MAX_FIELD_LENGTH, stdin);
 	newEvent.title[strcspn(newEvent.title, "\n")] = 0;
 
+	//check for event with same name
 }
