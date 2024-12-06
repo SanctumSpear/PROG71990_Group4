@@ -121,3 +121,13 @@ void Print(PNODE* list, EVENT event){
     }
     }
 }
+
+void Destroy(PNODE* list) {
+    PNODE current = *list;
+
+    while (current) {
+        PNODE tmp = current;
+        current = current->next;
+        free(tmp);
+    }
+}
