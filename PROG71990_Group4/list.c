@@ -44,3 +44,10 @@ void Remove(PNODE* list, EVENT event) {
 
     printf("Event removed\n");
 }
+
+void Print(PNODE* list, EVENT event){
+    PNODE current = *list;
+    if (current && CompareEvents(&current->data, &event)) {
+       printf("%s", event.title);
+    }
+}

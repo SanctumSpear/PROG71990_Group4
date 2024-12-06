@@ -15,3 +15,5 @@ typedef struct event {
 EVENT CreateEvent(const char* title, const char* description, struct tm date, int duration, const char* location);
 
 int CompareEvents(PEVENT event1, PEVENT event2);
+
+PrintEvent(PEVENT event);

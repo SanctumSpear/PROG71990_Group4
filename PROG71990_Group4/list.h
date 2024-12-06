@@ -10,4 +10,6 @@ void Add(PNODE* list, EVENT event);
 
 void Remove(PNODE* list, EVENT event);
 
+void Print(PNODE* list, EVENT event);
+
 
