@@ -1,8 +1,12 @@
 #include "event.h"
 #include "list.h"
+#include "utils.h"
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+
+#define FILENAME "eventData.bin"
 
 PNODE SearchEvent(PNODE list, const char* title) {
     PNODE current = list;
@@ -26,7 +30,7 @@ void UpdateEvent(PNODE* list, const char* title) {
 
     char newTitle[MAX_FIELD_LENGTH];
     char newDesc[MAX_DESC_LENGTH];
-    //struct tm newDate;
+    struct tm newDate;
     int newDuration;
     char newLocation[MAX_FIELD_LENGTH];
 
@@ -39,8 +43,7 @@ void UpdateEvent(PNODE* list, const char* title) {
     ClearInputBuffer();
 
     printf("Enter new time (or press enter to skip): ");
-    //write function for this maybe
-    ClearInputBuffer();
+    GetDateInput();
 
     printf("Enter new duration in minutes: (or press enter to skip): ");
     scanf_s("%d", &newDuration);
@@ -56,8 +59,8 @@ void UpdateEvent(PNODE* list, const char* title) {
     if (newDesc[0] != '\0')
         strncpy(event->data.description, newDesc, MAX_DESC_LENGTH - 1);
 
-    //if (newDate.tm_year)
-       // event->data.date = newDate;
+    if (newDate.tm_year)
+       event->data.date = newDate;
 
     if (newDuration)
         event->data.duration = newDuration;
@@ -113,7 +116,6 @@ void Remove(PNODE* list, EVENT event) {
 void Print(PNODE* list, EVENT event){
     PNODE current = *list;
 
-
     while (current && !CompareEvents(&current->data, &event)) {
         current = current->next;
     if (current && CompareEvents(&current->data, &event)) {
@@ -130,4 +132,6 @@ void Destroy(PNODE* list) {
         current = current->next;
         free(tmp);
     }
+
+    list = NULL;
 }
