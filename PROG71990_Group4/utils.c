@@ -25,3 +25,16 @@ struct tm GetDateInput() {
 
     return date;
 }
+
+void PrintMenu() {
+    printf("\n=== Event Management System ===\n");
+    printf("1. Add Event\n");
+    printf("2. Delete Event\n");
+    printf("3. Update Event\n");
+    printf("4. Display Event\n");
+    printf("5. Display All Events\n");
+    printf("6. Display Events in Date Range\n");
+    printf("7. Search Event\n");
+    printf("0. Exit\n");
+    printf("Enter your choice: ");
+}

@@ -129,6 +129,14 @@ void Print(PNODE* list, EVENT event){
     }
 }
 
+void PrintAll() {
+
+}
+
+void PrintRange() {
+
+}
+
 void Destroy(PNODE* list) {
     PNODE current = *list;
 

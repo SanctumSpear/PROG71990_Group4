@@ -5,3 +5,5 @@
 void ClearInputBuffer();
 
 struct tm GetDateInput();
+
+void PrintMenu();

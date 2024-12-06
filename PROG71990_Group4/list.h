@@ -15,6 +15,10 @@ PNODE SearchEvent(PNODE list, const char* title);
 
 void Print(PNODE* list, EVENT event);
 
+void PrintAll();
+
+void PrintRange();
+
 void UpdateEvent(PNODE* list, const char* title);
 
 void Destroy(PNODE* list);
