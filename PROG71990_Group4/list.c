@@ -5,7 +5,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 
+#define _CRT_SECURE_NO_WARNINGS
 #define FILENAME "eventData.bin"
 
 PNODE SearchEvent(PNODE list, const char* title) {
@@ -30,7 +32,7 @@ void UpdateEvent(PNODE* list, const char* title) {
 
     char newTitle[MAX_FIELD_LENGTH];
     char newDesc[MAX_DESC_LENGTH];
-    struct tm newDate;
+    struct tm newDate = { 0 };
     int newDuration;
     char newLocation[MAX_FIELD_LENGTH];
 
