@@ -47,7 +47,12 @@ void Remove(PNODE* list, EVENT event) {
 
 void Print(PNODE* list, EVENT event){
     PNODE current = *list;
+
+
+    while (current && !CompareEvents(&current->data, &event)) {
+        current = current->next;
     if (current && CompareEvents(&current->data, &event)) {
        printf("%s", event.title);
+    }
     }
 }
