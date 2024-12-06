@@ -1,5 +1,8 @@
 #pragma once
+//kian cloutier - prog71990 - group 4 project - fall24
+
 #include <time.h>
+
 #define MAX_FIELD_LENGTH 100
 #define MAX_DESC_LENGTH 250
 #define MAX_EVENTS 50
@@ -16,4 +19,4 @@ EVENT CreateEvent(const char* title, const char* description, struct tm date, in
 
 int CompareEvents(PEVENT event1, PEVENT event2);
 
-PrintEvent(PEVENT event);
+void PrintEvent(PEVENT event);
