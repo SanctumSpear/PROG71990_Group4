@@ -1,3 +1,6 @@
+//kian cloutier - prog71990 - group 4 project - fall24
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "event.h"
 #include "list.h"
 #include "utils.h"
@@ -7,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define _CRT_SECURE_NO_WARNINGS
+
 #define FILENAME "eventData.bin"
 
 PNODE SearchEvent(PNODE list, const char* title) {

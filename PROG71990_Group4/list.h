@@ -1,5 +1,6 @@
 #pragma once
 #include "event.h"
+//kian cloutier - prog71990 - group 4 project - fall24
 
 typedef struct node {
 	EVENT data;
