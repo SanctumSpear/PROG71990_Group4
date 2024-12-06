@@ -18,3 +18,7 @@ void Print(PNODE* list, EVENT event);
 void UpdateEvent(PNODE* list, const char* title);
 
 void Destroy(PNODE* list);
+
+int SaveData(PNODE* list);
+
+int LoadData();

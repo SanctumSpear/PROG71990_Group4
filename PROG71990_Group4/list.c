@@ -1,4 +1,4 @@
-//kian cloutier - prog71990 - group 4 project - fall24
+//kian cloutier && ali sheppard - prog71990 - group 4 project - fall24
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "event.h"
@@ -139,4 +139,41 @@ void Destroy(PNODE* list) {
     }
 
     list = NULL;
+}
+
+int SaveData(PNODE* list) {
+    FILE* data = fopen(FILENAME, "wb");
+
+    if (!data) {
+        fprintf(stderr, "Error saving to file");
+        return 0;
+    }
+    
+    PNODE current = list;
+    while (current) {
+        fwrite(&current->data, sizeof(EVENT), 1, data);
+        current = current->next;
+    }
+
+    fclose(data);
+    printf("Saved to file succesfully\n");
+    return 1;
+}
+
+int LoadData() {
+    FILE* data = fopen(FILENAME, "rb");
+
+    if (!data) {
+        fprintf(stderr, "Error loading from file");
+        return 0;
+    }
+
+    PNODE list = NULL;
+    EVENT temp;
+    while (fread(&temp, sizeof(EVENT), 1, data)) {
+        Add(&list, temp);
+    }
+
+    fclose(data);
+    printf("Loaded from file succesfully\n");
 }
