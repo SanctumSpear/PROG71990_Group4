@@ -17,7 +17,7 @@ void Print(PNODE* list, PEVENT event);
 
 void PrintAll(PNODE list);
 
-void PrintRange();
+void PrintRange(PNODE* list, struct tm startDate, struct tm endDate);
 
 void UpdateEvent(PNODE* list, const char* title);
 

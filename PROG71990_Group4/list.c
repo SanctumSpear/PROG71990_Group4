@@ -140,8 +140,25 @@ void PrintAll(PNODE list) {
     printf("Total events: %d\n", count);
 }
 
-void PrintRange() {
+void PrintRange(PNODE* list, struct tm startDate, struct tm endDate) {
+    PNODE current = *list;
+    int eventsFound = 0;
 
+
+    while (current) {
+
+        if (difftime(mktime(&current->data.date), mktime(&startDate)) >= 0 &&
+            difftime(mktime(&endDate), mktime(&current->data.date)) >= 0) {
+
+            PrintEvent(&current->data);
+            eventsFound = 1;
+        }
+        current = current->next;
+    }
+
+    if (!eventsFound) {
+        printf("No events found in the specified date range.\n");
+    }
 }
 
 void Destroy(PNODE* list) {
