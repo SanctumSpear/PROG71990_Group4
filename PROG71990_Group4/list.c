@@ -118,7 +118,7 @@ void Remove(PNODE* list, EVENT event) {
     printf("Event removed\n");
 }
 
-void Print(PNODE* list, EVENT event){
+void Print(PNODE* list, PEVENT event){
     PNODE current = *list;
 
     while (current && !CompareEvents(&current->data, &event)) {
