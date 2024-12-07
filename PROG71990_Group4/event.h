@@ -15,7 +15,7 @@ typedef struct event {
 	char location[MAX_FIELD_LENGTH];
 } EVENT, *PEVENT;
 
-EVENT CreateEvent(const char* title, const char* description, struct tm date, int duration, const char* location);
+EVENT CreateEvent();
 
 int CompareEvents(PEVENT event1, PEVENT event2);
 

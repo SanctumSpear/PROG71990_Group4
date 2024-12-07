@@ -70,8 +70,8 @@ void UpdateEvent(PNODE* list, const char* title) {
     if (newDuration)
         event->data.duration = newDuration;
 
-    if (newLocation[0] != '\0');
-    strncpy(event->data.location, newLocation, MAX_FIELD_LENGTH - 1);
+    if (newLocation[0] != '\0')
+        strncpy(event->data.location, newLocation, MAX_FIELD_LENGTH - 1);
 
     printf("event updated");
 }
@@ -86,7 +86,7 @@ void Add(PNODE* list, EVENT event) {
     newNode->data = event;
     newNode->next = *list;
     *list = newNode;
-    printf("Event added");
+    printf("Event added\n");
 }
 
 void Remove(PNODE* list, EVENT event) {
@@ -129,8 +129,19 @@ void Print(PNODE* list, PEVENT event){
     }
 }
 
-void PrintAll() {
-
+void PrintAll(PNODE list) {
+    if (!list) {
+        printf("No events to display\n");
+        return;
+    }
+    PNODE current = list;
+    int count = 0;
+    while (current) {
+        PrintEvent(&current->data);
+        current = current->next;
+        count++;
+    }
+    printf("Total events: %d\n", count);
 }
 
 void PrintRange() {
@@ -138,6 +149,10 @@ void PrintRange() {
 }
 
 void Destroy(PNODE* list) {
+    if (!list) {
+        return;
+    }
+
     PNODE current = *list;
 
     while (current) {
@@ -146,10 +161,10 @@ void Destroy(PNODE* list) {
         free(tmp);
     }
 
-    list = NULL;
+    *list = NULL;
 }
 
-int SaveData(PNODE* list) {
+int SaveData(PNODE list) {
     FILE* data = fopen(FILENAME, "wb");
 
     if (!data) {
@@ -158,6 +173,9 @@ int SaveData(PNODE* list) {
     }
     
     PNODE current = list;
+    if (!current)
+        return 0;
+
     while (current) {
         fwrite(&current->data, sizeof(EVENT), 1, data);
         current = current->next;
@@ -168,15 +186,15 @@ int SaveData(PNODE* list) {
     return 1;
 }
 
-int LoadData() {
+PNODE LoadData() {
     FILE* data = fopen(FILENAME, "rb");
+    PNODE list = NULL;
 
     if (!data) {
         fprintf(stderr, "Error loading from file");
-        return 0;
+        return NULL;
     }
 
-    PNODE list = NULL;
     EVENT temp;
     while (fread(&temp, sizeof(EVENT), 1, data)) {
         Add(&list, temp);
@@ -184,4 +202,5 @@ int LoadData() {
 
     fclose(data);
     printf("Loaded from file succesfully\n");
+    return list;
 }
