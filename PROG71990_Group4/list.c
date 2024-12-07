@@ -118,15 +118,9 @@ void Remove(PNODE* list, EVENT event) {
     printf("Event removed\n");
 }
 
-void Print(PNODE* list, PEVENT event){
-    PNODE current = *list;
-
-    while (current && !CompareEvents(&current->data, &event)) {
-        current = current->next;
-    if (current && CompareEvents(&current->data, &event)) {
-        PrintEvent;
-    }
-    }
+void Print(PNODE list, const char* title){
+    PNODE eventToPrint = SearchEvent(list, title);
+    PrintEvent(&eventToPrint->data);
 }
 
 void PrintAll(PNODE list) {
