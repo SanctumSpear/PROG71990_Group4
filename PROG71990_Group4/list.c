@@ -52,7 +52,7 @@ void Print(PNODE* list, EVENT event){
     while (current && !CompareEvents(&current->data, &event)) {
         current = current->next;
     if (current && CompareEvents(&current->data, &event)) {
-       printf("%s", event.title);
+        PrintEvent;
     }
     }
 }
