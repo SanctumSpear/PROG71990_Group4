@@ -19,23 +19,23 @@ EVENT CreateEvent() {
     char newLocation[MAX_FIELD_LENGTH];
 
     printf("Enter title (or press enter to skip): ");
-    scanf_s("%s", newTitle, MAX_FIELD_LENGTH);
-    ClearInputBuffer();
+    fgets(newTitle, MAX_FIELD_LENGTH, stdin);
+    newTitle[strcspn(newTitle, "\n")] = 0;
 
     printf("Enter description (or press enter to skip): ");
-    scanf_s("%s", newDesc, MAX_DESC_LENGTH);
-    ClearInputBuffer();
+    fgets(newDesc, MAX_DESC_LENGTH, stdin);
+    newDesc[strcspn(newDesc, "\n")] = 0;
 
     printf("Enter time (or press enter to skip): ");
-    GetDateInput();
+    newDate = GetDateInput();
 
     printf("Enter new duration in minutes: (or press enter to skip): ");
     scanf_s("%d", &newDuration);
     ClearInputBuffer();
 
     printf("Enter new location: (or press enter to skip): ");
-    scanf_s("%s", newLocation, MAX_FIELD_LENGTH);
-    ClearInputBuffer();
+    fgets(newLocation, MAX_FIELD_LENGTH, stdin);
+    newLocation[strcspn(newLocation, "\n")] = 0;
 
     strcpy(newEvent.title, newTitle);
     strcpy(newEvent.description, newDesc);

@@ -19,6 +19,7 @@ int main(void) {
 		ClearInputBuffer();
 		result = 0;
 		searchedEvent = NULL;
+		SaveData(eventList);
 
 		switch (choice) {
 			case 1:
@@ -42,6 +43,7 @@ int main(void) {
 				ClearInputBuffer();
 				break;
 			case 3:
+				//update
 				printf("Enter event name to update: ");
 				result = scanf_s("%s", title, MAX_FIELD_LENGTH);
 				searchedEvent = SearchEvent(eventList, title);
@@ -65,7 +67,7 @@ int main(void) {
 				searchedEvent = SearchEvent(eventList, title);
 				if (result == 1) {
 					if (searchedEvent) {
-						//Print(eventList, title);
+						Print(eventList, searchedEvent);
 					}
 					else {
 						printf("No event found with that name\n");

@@ -13,7 +13,7 @@ void Remove(PNODE* list, EVENT event);
 
 PNODE SearchEvent(PNODE list, const char* title);
 
-void Print(PNODE* list, EVENT event);
+void Print(PNODE* list, PEVENT event);
 
 void PrintAll(PNODE list);
 

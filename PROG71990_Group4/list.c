@@ -48,7 +48,7 @@ void UpdateEvent(PNODE* list, const char* title) {
     ClearInputBuffer();
 
     printf("Enter new time (or press enter to skip): ");
-    GetDateInput();
+    newDate = GetDateInput();
 
     printf("Enter new duration in minutes: (or press enter to skip): ");
     scanf_s("%d", &newDuration);
@@ -136,8 +136,10 @@ void PrintAll(PNODE list) {
     }
     PNODE current = list;
     int count = 0;
+    printf("--------------------------\n");
     while (current) {
         PrintEvent(&current->data);
+        printf("--------------------------\n");
         current = current->next;
         count++;
     }
